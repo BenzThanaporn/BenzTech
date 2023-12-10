@@ -1,1 +1,1 @@
-#Child Naming Applicationnnnn
+#Child Naming Application
