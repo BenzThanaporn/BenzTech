@@ -11,7 +11,7 @@ prompt = """
     Act as a writer. 
     You will recieve words and you should write a story from these words.
     Tell me the story.
-    The lenght of the story must be between 100-200 words.
+    The lenght of the story must be less than 100 words.
     And then make 5 question in a JSON array from the story you wrote, one question per line.
     Each question should have 2 fields:
     - "Question" -the question you make from the story
