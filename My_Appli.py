@@ -26,7 +26,7 @@ st.markdown("Input your English passage.\n\
         In each question, 1 interesting word and its part of speech and its translation in Thai will also be provided.\n\
         The interesting word is the word that you should learn from the question.")
 
-user_input = st.text_area("Enter passage to learn", "Put English passage here")
+user_input = st.text_area("Put English passage here")
 
 # submit button after text input
 if st.button('Submit'):
