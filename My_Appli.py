@@ -1,4 +1,4 @@
-#Child Naming Application
+#Write a story from user'word and make questions
 
 import streamlit as st
 import openai
@@ -19,9 +19,29 @@ prompt = """
         """
         
 st.title('Write a story and Make questions')
-st.markdown('Input 2-10 words.\n\
+st.markdown('Input your words.\n\
             The AI will write a story from the words you gave \n\
             and then you wil get 10 questions from the story, along with their answer.')
 
-user_input = st.text_area("Enter 2-10 words.Use colon to separate each words.\n\
-    For the example: bee, flower, eat")
+user_input = st.text_area("Enter 2-10 words. Use the colon to separate each words. For the example: bee, flower, eat")
+
+#Make a submit button. If the submit button is pressed, user_input will be sent to OpenAI along with the prompt. OpenAI will give back the output.
+
+if st.button("Submit"):
+    if user_input:
+        response = client.complete(
+            engine="text-davinci-003",
+            prompt=prompt + "\n\n" + user_input,
+            max_tokens=100,
+            n=1,
+            stop=None,
+            temperature=0.7,
+            top_p=1.0,
+            frequency_penalty=0.0,
+            presence_penalty=0.0,
+            log_level="info",
+        )
+        output = response.choices[0].text.strip()
+        st.text_area("Output", value=output, height=200)
+    else:
+        st.warning("Please enter some words before submitting.")
