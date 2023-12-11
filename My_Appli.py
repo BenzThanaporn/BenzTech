@@ -34,7 +34,6 @@ if st.button('Submit'):
         model="gpt-3.5-turbo",
         messages=messages_so_far
     )
-    st.info(response['choices'][0]['message']['content'])
     
         # Show the response from the AI in a box
     st.markdown('**AI response:**')
