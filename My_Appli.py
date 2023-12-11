@@ -11,8 +11,9 @@ prompt = """
     Act as a writer. 
     You will recieve words and you should write a story from these words.
     Tell me the story.
-    And then make 7 question in a JSON array from the story you wrote, one question per line.
-    Each question should have 3 fields:
+    The lenght of the story must be between 100-200 words.
+    And then make 5 question in a JSON array from the story you wrote, one question per line.
+    Each question should have 2 fields:
     - "Question" -the question you make from the story
     - "Answer" -the answer for the question
     """
@@ -20,9 +21,9 @@ prompt = """
 st.title('Write a story and Make questions')
 st.markdown('Input your words.\n\
         The AI will write a story from the words you gave \n\
-        and then you wil get 10 questions from the story, along with their answer.')
+        and then you wil get 5 questions from the story, along with their answer.')
 
-user_input = st.text_area("Enter 2-10 words. Use the colon to separate each words. For the example: bee, flower, eat")
+user_input = st.text_area("Enter 2-5 words. Use the colon to separate each words. For the example: bee, flower, eat")
 
 # submit button after text input
 if st.button('Submit'):
