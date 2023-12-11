@@ -11,7 +11,8 @@ client = openai.OpenAI(api_key=user_api_key)
 prompt = """
     Act as a writer. 
     You will recieve words and you should write a story from these words.
-    And then make 7 question from the story you wrote in a JSON array, one question per line.
+    Tell me the story.
+    And then make 7 question in a JSON array from the story you wrote, one question per line.
     Each question should have 3 fields:
     - "Question" -the question you make from the story
     - "Answer" -the answer for the question
