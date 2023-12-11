@@ -1,4 +1,4 @@
-#Write a story from user'word and make questions
+#Write a story from user's words and make questions
 
 import streamlit as st
 import openai
@@ -25,7 +25,7 @@ st.markdown('Input your words.\n\
 
 user_input = st.text_area("Enter 2-10 words. Use the colon to separate each words. For the example: bee, flower, eat")
 
-#Make a submit button. If the submit button is pressed, user_input will be sent to OpenAI along with the prompt. OpenAI will give back the output.
+
 
 if st.button("Submit"):
     if user_input:
@@ -45,3 +45,4 @@ if st.button("Submit"):
         st.text_area("Output", value=output, height=200)
     else:
         st.warning("Please enter some words before submitting.")
+
